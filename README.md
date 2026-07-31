@@ -1,162 +1,130 @@
+<div align="center">
+
 # 🛡️ Stegnoguard
 
-**Professional Crypto & Security Toolkit** — A modern web application for cryptography, steganography, and network security utilities.
+**Enterprise-Grade Client-Side Cryptography, Steganography & Security Suite**
 
-![React](https://img.shields.io/badge/React-18.3-blue?logo=react)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.5-blue?logo=typescript)
-![Vite](https://img.shields.io/badge/Vite-5.4-purple?logo=vite)
-![TailwindCSS](https://img.shields.io/badge/Tailwind-3.4-blue?logo=tailwindcss)
+[![React](https://img.shields.io/badge/React-18.3-61DAFB?style=flat-square&logo=react&logoColor=black)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.5-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-5.4-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-black.svg?style=flat-square)](LICENSE)
 
----
+*Stegnoguard is a high-performance, privacy-focused security toolkit designed for developers, security professionals, and enthusiasts. All core cryptographic and steganographic processing occurs 100% locally in the browser.*
 
-## ✨ Features
-
-### 🔐 Crypto Tools
-- **Hash Generator** — Generate MD5, SHA-1, and SHA-256 hashes
-- **Base64 Encoder/Decoder** — Encode and decode Base64 strings
-- **Password Generator** — Generate secure passwords with custom options (length, uppercase, lowercase, numbers, symbols)
-- **Text Encryption** — Encrypt and decrypt text using cipher algorithms
-
-### 🖼️ Steganography
-- **Hide Text in Image** — Embed secret messages inside images using LSB (Least Significant Bit) technique
-- **Extract Hidden Text** — Reveal hidden messages from steganographic images
-- **Pattern Generator** — Generate binary steganography patterns for educational purposes
-
-### 🌐 Web Tools
-- **JSON Formatter/Minifier** — Format and minify JSON data
-- **HTML Formatter/Minifier** — Format and minify HTML code
-- **CSS Formatter/Minifier** — Format and minify CSS stylesheets
-- **Lorem Ipsum Generator** — Generate placeholder text (words, sentences, paragraphs)
-- **Color Converter** — Convert between HEX, RGB, and HSL color formats
-- **UUID Generator** — Generate unique UUIDs
-- **Reading Time Calculator** — Calculate reading time for text content
-
-### 🔍 Network Tools
-- **IP Address Validator** — Validate IPv4/IPv6 addresses and detect private/public type
-- **URL Encoder/Decoder** — Encode and decode URL components
-- **QR Code Generator** — Generate ASCII QR codes
-- **DNS Lookup Simulator** — Simulate DNS lookups for educational purposes
-- **User Agent Parser** — Parse and analyze browser user agent strings
-
-### 🗺️ IP/DNS Lookup
-- **IP Geolocation** — Get detailed information about any IP address (city, region, country, ISP)
-- **DNS Lookup** — Real DNS lookups using Google and Cloudflare DNS-over-HTTPS
-- **Reverse DNS** — Perform reverse DNS lookups
-- **Batch IP Lookup** — Look up multiple IP addresses at once
-- **Your Public IP** — Detect and display your current public IP
-
-### 📧 Email Validator
-- **Email Validation** — Comprehensive email format and domain validation
-- **Disposable Email Detection** — Detect temporary/disposable email addresses
-- **MX Record Check** — Verify mail server records
-- **Breach Detection** — Check if an email has been involved in data breaches
+[Explore Features](#-features) • [Installation](#-quick-start) • [Architecture](#-architecture) • [Security](#-security--privacy)
 
 ---
 
-## 🚀 Getting Started
+</div>
+
+## 📌 Overview
+
+**Stegnoguard** consolidates cryptographic operations, image-based steganography, network diagnostics, and developer utilities into a single, cohesive dashboard. Built with a minimalist black-and-white aesthetic and fluid micro-animations, it delivers an intuitive user experience without compromising speed or computational privacy.
+
+---
+
+## ⚡ Core Features
+
+### 🔐 Cryptographic Tools
+* **Cryptographic Hashing:** Generate deterministic SHA-1, SHA-256, and MD5 digests using native Web Crypto APIs.
+* **AES Encryption:** Perform text encryption and decryption using custom secret keys.
+* **Base64 Encoding Engine:** Encode/decode binary and text content with UTF-8 support.
+* **Passcode Generator:** Configurable entropy password generator with customizable character sets.
+
+### 🖼️ Image Steganography
+* **LSB Steganography:** Embed hidden text payload directly into image pixels using Least Significant Bit insertion.
+* **Payload Extraction:** Extract concealed text messages from modified cover images.
+* **Visual Binary Pattern Generator:** Generate educational bit-level binary matrices from input strings.
+
+### 🌐 Developer & Web Utilities
+* **Data Formatters:** Format and minify JSON, HTML, and CSS documents.
+* **Color Space Converter:** Convert color values between HEX, RGB, and HSL spaces.
+* **Identifier & Text Tools:** Generate RFC4122 v4 UUIDs, calculate reading time metrics, and produce customizable Lorem Ipsum copy.
+
+### 🔍 Network & Infrastructure Tools
+* **IP Address Validator:** Analyze IPv4/IPv6 syntax and classify addresses (Public vs. Private/Local ranges).
+* **DNS Query Engine:** Query live DNS records (A, AAAA, CNAME, MX, NS, TXT) via Google and Cloudflare DNS-over-HTTPS APIs.
+* **User Agent Parser:** Parse user-agent headers to extract browser engine, version, OS, and device categories.
+* **QR Code Synthesizer:** Generate printable QR patterns directly within the browser interface.
+
+### 📧 Email Verification & Threat Analysis
+* **Syntax & Domain Validation:** Inspect syntax integrity and verify domain structure.
+* **Disposable Provider Detection:** Identify temporary and burner email address providers.
+* **Breach Intelligence:** Check address exposure status against known public breach indexes.
+
+---
+
+## 🚀 Quick Start
 
 ### Prerequisites
-- [Node.js](https://nodejs.org/) (v18 or higher)
-- npm (comes with Node.js)
+* **Node.js** v18.0.0 or higher
+* **npm** v9.0.0 or higher
 
-### Installation
+### Local Development
 
-```bash
-# Clone the repository
-git clone https://github.com/Arpithaapoojary/Stegnoguard.git
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/Arpithaapoojary/Stegnoguard.git
+   cd Stegnoguard
+   ```
 
-# Navigate to the project
-cd Stegnoguard
+2. **Install Dependencies**
+   ```bash
+   npm install
+   ```
 
-# Install dependencies
-npm install
+3. **Launch Development Server**
+   ```bash
+   npm run dev
+   ```
+   Navigate to `http://localhost:5173` in your browser.
 
-# Start the development server
-npm run dev
-```
-
-Open your browser and go to **http://localhost:5173**
-
-### Build for Production
-
-```bash
-npm run build
-```
-
-The production-ready files will be generated in the `dist/` folder.
-
----
-
-## 🛠️ Tech Stack
-
-| Technology | Purpose |
-|-----------|---------|
-| **React 18** | UI framework |
-| **TypeScript** | Type safety |
-| **Vite** | Build tool & dev server |
-| **Tailwind CSS** | Utility-first styling |
-| **Lucide React** | Icon library |
-| **Web Crypto API** | SHA-1, SHA-256 hashing |
+4. **Production Build**
+   ```bash
+   npm run build
+   npm run preview
+   ```
 
 ---
 
-## 📁 Project Structure
+## 🏗️ Architecture & Technology Stack
 
 ```
 Stegnoguard/
-├── public/
-│   └── stegnoguard.svg        # Favicon
 ├── src/
-│   ├── components/
-│   │   ├── CopyButton.tsx      # Reusable copy-to-clipboard button
-│   │   ├── CryptoTools.tsx     # Crypto tools tab
-│   │   ├── EmailValidatorTools.tsx
-│   │   ├── IPDNSLookupTools.tsx
-│   │   ├── LandingPage.tsx     # Landing page
-│   │   ├── NetworkTools.tsx
-│   │   ├── SteganographyTools.tsx
-│   │   ├── ToolCard.tsx        # Reusable card component
-│   │   ├── WebTools.tsx
-│   │   └── userDashboard.tsx   # Main dashboard
-│   ├── utils/
-│   │   ├── crypto.ts           # Crypto utility functions
-│   │   ├── emailValidation.ts  # Email validation logic
-│   │   ├── ipDnsLookup.ts      # IP/DNS lookup APIs
-│   │   ├── network.ts          # Network utility functions
-│   │   ├── steganography.ts    # Steganography algorithms
-│   │   └── web.ts              # Web utility functions
-│   ├── App.tsx                 # Root app with routing
-│   ├── main.tsx                # Entry point
-│   └── index.css               # Global styles
-├── index.html
-├── package.json
-├── tailwind.config.js
-├── tsconfig.json
-└── vite.config.ts
+│   ├── components/       # Component hierarchy (Dashboard, ToolCard, CopyButton)
+│   ├── utils/            # Pure JavaScript/TypeScript computational engines
+│   │   ├── crypto.ts          # Hashing & AES cipher modules
+│   │   ├── steganography.ts   # LSB pixel manipulation algorithms
+│   │   ├── network.ts         # IP, URL, and UserAgent parser utilities
+│   │   ├── ipDnsLookup.ts     # DNS-over-HTTPS & GeoIP API handlers
+│   │   ├── emailValidation.ts # Email syntax & breach detection logic
+│   │   └── web.ts             # Formatters, converters & generators
+│   ├── App.tsx           # Router and top-level layout controller
+│   ├── main.tsx          # Application entrypoint
+│   └── index.css         # Global design system & keyframe animation specs
+├── public/               # Static assets & SVG icons
+└── package.json          # Dependencies & npm scripts
 ```
 
 ---
 
-## 📸 Screenshots
+## 🔒 Security & Privacy
 
-The application features a clean, professional **white & black** design with smooth animations:
-
-- ⬜ Clean white background
-- ⬛ Black text and buttons
-- 🎯 Animated tab navigation
-- 🃏 Card hover effects
-- ✨ Smooth page transitions
+* **Zero Data Transmission:** Cryptographic and steganographic processing executes entirely inside client-side JavaScript memory. Sensitive payloads are never transmitted to external servers.
+* **API Transparency:** Network queries (DNS lookups, IP geolocation) rely strictly on secure HTTPS endpoints (Google DoH, Cloudflare DoH, ipapi).
 
 ---
 
-## 📄 License
+## 📜 License
 
-This project is open source and available for educational purposes.
+This project is distributed under the **MIT License**. See [`LICENSE`](LICENSE) for details.
 
 ---
 
-## 👤 Author
+<div align="center">
 
-**Arpitha Poojary**
+Developed with focus on privacy and precision by **[Arpitha Poojary](https://github.com/Arpithaapoojary)**
 
-- GitHub: [@Arpithaapoojary](https://github.com/Arpithaapoojary)
+</div>
