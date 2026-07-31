@@ -8,35 +8,47 @@ interface ToolCardProps {
   children: ReactNode;
 }
 
-const ToolCard = ({ title, description, icon, color, children }: ToolCardProps) => {
-  const colorClasses = {
-    blue: 'border-blue-200 bg-blue-50',
-    green: 'border-green-200 bg-green-50',
-    purple: 'border-purple-200 bg-purple-50',
-    orange: 'border-orange-200 bg-orange-50'
-  };
-
-  const iconColorClasses = {
-    blue: 'text-blue-600',
-    green: 'text-green-600',
-    purple: 'text-purple-600',
-    orange: 'text-orange-600'
-  };
-
+const ToolCard = ({ title, description, icon, children }: ToolCardProps) => {
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-      <div className={`px-6 py-4 border-b ${colorClasses[color]}`}>
-        <div className="flex items-center space-x-3">
-          <div className={iconColorClasses[color]}>
-            {icon}
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
-            <p className="text-sm text-gray-600">{description}</p>
-          </div>
+    <div
+      style={{
+        background: '#ffffff',
+        border: '1px solid #e8e8e8',
+        borderRadius: '12px',
+        overflow: 'hidden',
+        transition: 'border-color 0.2s, box-shadow 0.2s',
+      }}
+      onMouseEnter={e => {
+        const el = e.currentTarget as HTMLDivElement;
+        el.style.borderColor = '#ccc';
+        el.style.boxShadow = '0 8px 30px rgba(0,0,0,0.08)';
+      }}
+      onMouseLeave={e => {
+        const el = e.currentTarget as HTMLDivElement;
+        el.style.borderColor = '#e8e8e8';
+        el.style.boxShadow = 'none';
+      }}
+    >
+      <div style={{
+        padding: '14px 20px',
+        borderBottom: '1px solid #f0f0f0',
+        background: '#fafafa',
+        display: 'flex', alignItems: 'center', gap: '10px',
+      }}>
+        <div style={{
+          width: '30px', height: '30px',
+          background: '#111', borderRadius: '7px',
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+          color: '#fff', flexShrink: 0,
+        }}>
+          {icon}
+        </div>
+        <div>
+          <h3 style={{ fontSize: '0.88rem', fontWeight: 600, color: '#111', margin: 0 }}>{title}</h3>
+          <p style={{ fontSize: '0.7rem', color: '#999', margin: 0, marginTop: '1px' }}>{description}</p>
         </div>
       </div>
-      <div className="p-6">
+      <div style={{ padding: '20px' }}>
         {children}
       </div>
     </div>

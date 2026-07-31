@@ -21,14 +21,22 @@ const CopyButton = ({ text }: CopyButtonProps) => {
   return (
     <button
       onClick={handleCopy}
-      className="p-1 hover:bg-gray-200 rounded transition-colors"
       title="Copy to clipboard"
+      style={{
+        padding: '3px 8px',
+        background: copied ? '#111' : '#fff',
+        color: copied ? '#fff' : '#888',
+        border: `1px solid ${copied ? '#111' : '#ddd'}`,
+        borderRadius: '5px',
+        cursor: 'pointer',
+        display: 'flex', alignItems: 'center', gap: '4px',
+        fontSize: '0.68rem', fontWeight: 500,
+        transition: 'all 0.2s',
+      }}
+      onMouseEnter={e => { if (!copied) { (e.currentTarget as HTMLButtonElement).style.borderColor = '#999'; (e.currentTarget as HTMLButtonElement).style.color = '#444'; }}}
+      onMouseLeave={e => { if (!copied) { (e.currentTarget as HTMLButtonElement).style.borderColor = '#ddd'; (e.currentTarget as HTMLButtonElement).style.color = '#888'; }}}
     >
-      {copied ? (
-        <Check className="w-4 h-4 text-green-600" />
-      ) : (
-        <Copy className="w-4 h-4 text-gray-600" />
-      )}
+      {copied ? <><Check style={{ width: '11px', height: '11px' }} /> Copied</> : <><Copy style={{ width: '11px', height: '11px' }} /> Copy</>}
     </button>
   );
 };
