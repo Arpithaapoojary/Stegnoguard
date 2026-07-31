@@ -8,11 +8,14 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.5-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Vite](https://img.shields.io/badge/Vite-5.4-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Vercel](https://img.shields.io/badge/Vercel-Deployed-000000?style=flat-square&logo=vercel&logoColor=white)](https://stegnoguard.vercel.app/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-black.svg?style=flat-square)](LICENSE)
 
 *Stegnoguard is a high-performance, privacy-focused security toolkit designed for developers, security professionals, and enthusiasts. All core cryptographic and steganographic processing occurs 100% locally in the browser.*
 
-[Explore Features](#-features) • [Installation](#-quick-start) • [Architecture](#-architecture) • [Security](#-security--privacy)
+🚀 **Live Application:** [https://stegnoguard.vercel.app/](https://stegnoguard.vercel.app/)
+
+[Live Demo](https://stegnoguard.vercel.app/) • [Explore Features](#-features) • [Installation](#-quick-start) • [Architecture](#-architecture) • [Security](#-security--privacy)
 
 ---
 
