@@ -18,44 +18,44 @@
 
 </div>
 
-## 📌 Overview
+##  Overview
 
 **Stegnoguard** consolidates cryptographic operations, image-based steganography, network diagnostics, and developer utilities into a single, cohesive dashboard. Built with a minimalist black-and-white aesthetic and fluid micro-animations, it delivers an intuitive user experience without compromising speed or computational privacy.
 
 ---
 
-## ⚡ Core Features
+##  Core Features
 
-### 🔐 Cryptographic Tools
+###  Cryptographic Tools
 * **Cryptographic Hashing:** Generate deterministic SHA-1, SHA-256, and MD5 digests using native Web Crypto APIs.
 * **AES Encryption:** Perform text encryption and decryption using custom secret keys.
 * **Base64 Encoding Engine:** Encode/decode binary and text content with UTF-8 support.
 * **Passcode Generator:** Configurable entropy password generator with customizable character sets.
 
-### 🖼️ Image Steganography
+###  Image Steganography
 * **LSB Steganography:** Embed hidden text payload directly into image pixels using Least Significant Bit insertion.
 * **Payload Extraction:** Extract concealed text messages from modified cover images.
 * **Visual Binary Pattern Generator:** Generate educational bit-level binary matrices from input strings.
 
-### 🌐 Developer & Web Utilities
+###  Developer & Web Utilities
 * **Data Formatters:** Format and minify JSON, HTML, and CSS documents.
 * **Color Space Converter:** Convert color values between HEX, RGB, and HSL spaces.
 * **Identifier & Text Tools:** Generate RFC4122 v4 UUIDs, calculate reading time metrics, and produce customizable Lorem Ipsum copy.
 
-### 🔍 Network & Infrastructure Tools
+###  Network & Infrastructure Tools
 * **IP Address Validator:** Analyze IPv4/IPv6 syntax and classify addresses (Public vs. Private/Local ranges).
 * **DNS Query Engine:** Query live DNS records (A, AAAA, CNAME, MX, NS, TXT) via Google and Cloudflare DNS-over-HTTPS APIs.
 * **User Agent Parser:** Parse user-agent headers to extract browser engine, version, OS, and device categories.
 * **QR Code Synthesizer:** Generate printable QR patterns directly within the browser interface.
 
-### 📧 Email Verification & Threat Analysis
+### Email Verification & Threat Analysis
 * **Syntax & Domain Validation:** Inspect syntax integrity and verify domain structure.
 * **Disposable Provider Detection:** Identify temporary and burner email address providers.
 * **Breach Intelligence:** Check address exposure status against known public breach indexes.
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 * **Node.js** v18.0.0 or higher
@@ -88,7 +88,7 @@
 
 ---
 
-## 🏗️ Architecture & Technology Stack
+##  Architecture & Technology Stack
 
 ```
 Stegnoguard/
@@ -110,14 +110,14 @@ Stegnoguard/
 
 ---
 
-## 🔒 Security & Privacy
+##  Security & Privacy
 
 * **Zero Data Transmission:** Cryptographic and steganographic processing executes entirely inside client-side JavaScript memory. Sensitive payloads are never transmitted to external servers.
 * **API Transparency:** Network queries (DNS lookups, IP geolocation) rely strictly on secure HTTPS endpoints (Google DoH, Cloudflare DoH, ipapi).
 
 ---
 
-## 📜 License
+##  License
 
 This project is distributed under the **MIT License**. See [`LICENSE`](LICENSE) for details.
 
